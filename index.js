@@ -7,7 +7,7 @@ app.engine('handleabars', exphbs.engine())
 app.set('view engine', 'handlebars')
 
 app.get('/', (requisicao, resposta) => {
-    resposta.send("cr7 melhor do mundo")
+    resposta.render('home')
 })
 
 app.listen(3000, () => {
