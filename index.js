@@ -3,8 +3,10 @@ const exphbs = require("express-handlebars")
 
 const app = express()
 
-app.engine('handleabars', exphbs.engine())
+app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
+
+app.use(express.static('public'))
 
 app.get('/', (requisicao, resposta) => {
     resposta.render('home')
